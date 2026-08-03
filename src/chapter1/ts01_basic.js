@@ -15,6 +15,7 @@ const sub = (a, b) => a - b;
 const add2 = (a, b) => a + b;
 add2(1, 2);
 // add2.name = 'readOnly'; // 에러 발생 
+add2.count = 3;
 console.log(add2);
 /**
  * TS 내장 타입(lib.es5.d.ts)에 이미 interface Function { readonly name: string; ... }로 정의돼 있어서,

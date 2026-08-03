@@ -30,13 +30,15 @@ type Counter = {
 }
 
 type Operation2 = {
-  (a: number, b: number): number;
-  name: string;
+    (a: number, b: number): number;
+//   name: string;
+    count: number;
 };
 
 const add2: Operation2 = (a, b) => a + b;
 add2(1, 2);
 // add2.name = 'readOnly'; // 에러 발생 
+add2.count = 3; // 이건 접근 가능..
 console.log(add2);
 /**
  * TS 내장 타입(lib.es5.d.ts)에 이미 interface Function { readonly name: string; ... }로 정의돼 있어서, 
